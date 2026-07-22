@@ -12,7 +12,6 @@
             if (e.key === 'F12') e.preventDefault();
         });
 
-        // دالة تنظيف المدخلات لضمان عملها على كل الهواتف
         function normalizeInput(value) {
             if (!value) return 0;
             const arabicToEnglish = {
@@ -33,9 +32,6 @@
         .sub-title { text-align: center; color: #fff; font-size: 14px; margin-bottom: 5px; }
         .title { text-align: center; color: #ffd700; margin-bottom: 15px; font-weight: bold; font-size: 18px; }
         
-        /* تنسيق مساحات الإعلانات */
-        .ad-box { background: #0f172a; border: 1px dashed #ffd700; border-radius: 8px; text-align: center; padding: 10px; margin: 12px 0; color: #cbd5e1; font-size: 11px; }
-
         .market-btns { display: flex; gap: 10px; margin-bottom: 15px; }
         .market-btn { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ffd700; background: #0f172a; color: white; font-size: 13px; cursor: pointer; }
         .market-btn.active { background: #ffd700; color: #000; font-weight: bold; }
@@ -58,11 +54,6 @@
     
     <div class="sub-title" id="subTitle">حاسبة اذون الخزانة</div>
     <div class="title" id="groupTitle">جروب عملاء البنوك المصرية</div>
-    
-    <!-- مكان إعلان علوي -->
-    <div class="ad-box">
-        مساحة إعلانية علوية (ضع كود الإعلان هنا)
-    </div>
 
     <div class="market-btns">
         <button class="market-btn active" id="btn1" onclick="setMarket('primary')">السوق الأولي</button>
@@ -83,11 +74,6 @@
     <div class="total-box">
         <span id="lblTotal" style="font-size:13px">المبلغ المسترد نهاية المدة:</span><h4 id="resTotal" style="margin:5px 0 0 0">0</h4>
         <span id="lblAnnualYield" style="font-size:12px; margin-top:10px; color:#ffd700">نسبة العائد السنوي: <b id="resAnnualYield">0</b>%</span>
-    </div>
-
-    <!-- مكان إعلان سفلي -->
-    <div class="ad-box">
-        مساحة إعلانية سفلية (ضع كود الإعلان هنا)
     </div>
 
     <div class="footer">
@@ -173,3 +159,4 @@
 </script>
 </body>
 </html>
+عز ت
