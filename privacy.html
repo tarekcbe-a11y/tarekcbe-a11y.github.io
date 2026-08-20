@@ -4,66 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>سياسة الخصوصية - Privacy Policy</title>
+    <title>سياسة الخصوصية - جروب عملاء البنوك المصرية</title>
 
     <style>
         body {
             font-family: Tahoma, sans-serif;
-            background: #111827;
+            background: #0f172a;
             color: #f9fafb;
             padding: 15px;
             line-height: 1.8;
             margin: 0;
+            user-select: none;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 450px;
             margin: 30px auto;
-            background: #1f2937;
-            padding: 25px;
-            border-radius: 12px;
-            border: 2px solid #d4af37;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid #ffd700;
             box-sizing: border-box;
         }
 
         .lang-btn {
-            display: block;
-            margin: 0 auto 20px auto;
-            background: #d4af37;
+            background: #ffd700;
             color: #000;
             border: none;
-            padding: 8px 15px;
+            padding: 6px 10px;
             border-radius: 8px;
             font-weight: bold;
             cursor: pointer;
+            font-size: 12px;
+            display: block;
+            margin: 0 0 15px auto;
         }
 
         h1 {
-            color: #d4af37;
+            color: #ffd700;
             text-align: center;
             margin-top: 5px;
+            font-size: 18px;
         }
 
         h3 {
-            color: #d4af37;
-            margin-top: 25px;
+            color: #ffd700;
+            margin-top: 20px;
+            font-size: 14px;
         }
 
         p {
             color: #e5e7eb;
+            font-size: 12px;
         }
 
         .footer {
             text-align: center;
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #d4af37;
-            color: #d4af37;
+            margin-top: 20px;
             font-size: 12px;
+            color: #ffd700;
+            border-top: 1px solid #ffd700;
+            padding-top: 10px;
         }
 
         a {
-            color: #d4af37;
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -108,8 +118,10 @@
 
     <div class="footer">
         🛡️ جروب عملاء البنوك المصرية<br>
-        Developed by Tarek Metwally<br><br>
-        <a href="index.html" id="backLink">العودة إلى الحاسبة</a>
+        <a href="privacy.html" style="color:#ffd700; text-decoration:none;">سياسة الخصوصية</a> | 
+        <a href="about.html" style="color:#ffd700; text-decoration:none; font-size: 11px;">دليل أذون الخزانة</a> | 
+        <a href="index.html" style="color:#ffd700; text-decoration:none;">الرئيسية</a><br>
+        Developed by Tarek Metwally
     </div>
 
 </div>
@@ -167,9 +179,6 @@ function toggleLang() {
         isAr
         ? "إذا كانت لديك أي أسئلة حول سياسة الخصوصية، يمكنك التواصل معنا."
         : "If you have any questions regarding this Privacy Policy, you may contact us.";
-
-    document.getElementById("backLink").innerText =
-        isAr ? "العودة إلى الحاسبة" : "Back to Calculator";
 }
 
 </script>
