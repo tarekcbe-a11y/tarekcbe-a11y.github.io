@@ -3,25 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية</title>
+
+    <title>سياسة الخصوصية - Privacy Policy</title>
+
     <style>
-        body { font-family: Tahoma, sans-serif; background: #111827; color: #f9fafb; padding: 20px; line-height: 1.8; }
-        .container { max-width: 800px; margin: 0 auto; background: #1f2937; padding: 30px; border-radius: 12px; border: 2px solid #d4af37; }
-        h1 { color: #d4af37; text-align: center; }
+        body {
+            font-family: Tahoma, sans-serif;
+            background: #111827;
+            color: #f9fafb;
+            padding: 15px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #d4af37;
+            box-sizing: border-box;
+        }
+
+        .lang-btn {
+            display: block;
+            margin: 0 auto 20px auto;
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: #d4af37;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        h3 {
+            color: #d4af37;
+            margin-top: 25px;
+        }
+
+        p {
+            color: #e5e7eb;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #d4af37;
+            color: #d4af37;
+            font-size: 12px;
+        }
+
+        a {
+            color: #d4af37;
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>سياسة الخصوصية</h1>
-        <p>مرحباً بك في موقعنا. نحن نعتبر خصوصية زوارنا أولوية هامة. توضح وثيقة سياسة الخصوصية هذه أنواع المعلومات الشخصية التي يتم جمعها وكيفية استخدامها.</p>
-        
-        <h3>إعلانات Google AdSense</h3>
-        <p>نحن نستعين بشركات إعلانية طرف ثالث (مثل جوجل أدسنس) لعرض الإعلانات. قد تستخدم هذه الشركات معلومات حول زياراتك لهذا الموقع (باستثناء الاسم أو العنوان أو عنوان البريد الإلكتروني أو رقم الهاتف) لتقديم إعلانات حول السلع والخدمات التي تهمك.</p>
-        
-        <h3>ملفات تعريف الارتباط (Cookies)</h3>
-        <p>تقوم جوجل باستخدام ملفات تعريف الارتباط لعرض الإعلانات بناءً على زيارات السابقة للموقع أو مواقع أخرى.</p>
-        
-        <p>إذا كنت بحاجة إلى أي استفسار أو لديك مزيد من الأسئلة حول سياسة الخصوصية، فلا تتردد في الاتصال بنا.</p>
+
+<div class="container">
+
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">
+        English
+    </button>
+
+    <h1 id="title">سياسة الخصوصية</h1>
+
+    <p id="intro">
+        نحرص على احترام خصوصية زوار موقعنا، وتوضح هذه السياسة كيفية التعامل مع المعلومات المتعلقة باستخدام الموقع.
+    </p>
+
+    <h3 id="adsTitle">إعلانات Google AdSense</h3>
+
+    <p id="adsText">
+        قد نستخدم خدمة Google AdSense لعرض الإعلانات على الموقع. وقد تستخدم Google ملفات تعريف الارتباط وتقنيات مماثلة لتقديم إعلانات أكثر ملاءمة للمستخدمين.
+    </p>
+
+    <h3 id="cookiesTitle">ملفات تعريف الارتباط (Cookies)</h3>
+
+    <p id="cookiesText">
+        قد يتم استخدام ملفات تعريف الارتباط لتحسين تجربة المستخدم وقياس أداء الإعلانات والمحتوى.
+    </p>
+
+    <h3 id="dataTitle">المعلومات الشخصية</h3>
+
+    <p id="dataText">
+        لا تطلب الحاسبة من المستخدم إدخال الاسم أو عنوان البريد الإلكتروني أو رقم الهاتف لاستخدام وظائفها الأساسية.
+    </p>
+
+    <h3 id="contactTitle">التواصل</h3>
+
+    <p id="contactText">
+        إذا كانت لديك أي أسئلة حول سياسة الخصوصية، يمكنك التواصل معنا.
+    </p>
+
+    <div class="footer">
+        🛡️ جروب عملاء البنوك المصرية<br>
+        Developed by Tarek Metwally<br><br>
+        <a href="index.html" id="backLink">العودة إلى الحاسبة</a>
     </div>
+
+</div>
+
+<script>
+
+let isAr = true;
+
+function toggleLang() {
+
+    isAr = !isAr;
+
+    document.documentElement.lang = isAr ? "ar" : "en";
+    document.documentElement.dir = isAr ? "rtl" : "ltr";
+
+    document.getElementById("langBtn").innerText =
+        isAr ? "English" : "العربية";
+
+    document.getElementById("title").innerText =
+        isAr ? "سياسة الخصوصية" : "Privacy Policy";
+
+    document.getElementById("intro").innerText =
+        isAr
+        ? "نحرص على احترام خصوصية زوار موقعنا، وتوضح هذه السياسة كيفية التعامل مع المعلومات المتعلقة باستخدام الموقع."
+        : "We respect the privacy of our visitors. This policy explains how information related to the use of our website is handled.";
+
+    document.getElementById("adsTitle").innerText =
+        isAr ? "إعلانات Google AdSense" : "Google AdSense";
+
+    document.getElementById("adsText").innerText =
+        isAr
+        ? "قد نستخدم خدمة Google AdSense لعرض الإعلانات على الموقع. وقد تستخدم Google ملفات تعريف الارتباط وتقنيات مماثلة لتقديم إعلانات أكثر ملاءمة للمستخدمين."
+        : "We may use Google AdSense to display advertisements on the website. Google may use cookies and similar technologies to provide more relevant advertisements.";
+
+    document.getElementById("cookiesTitle").innerText =
+        isAr ? "ملفات تعريف الارتباط (Cookies)" : "Cookies";
+
+    document.getElementById("cookiesText").innerText =
+        isAr
+        ? "قد يتم استخدام ملفات تعريف الارتباط لتحسين تجربة المستخدم وقياس أداء الإعلانات والمحتوى."
+        : "Cookies may be used to improve the user experience and measure the performance of advertisements and content.";
+
+    document.getElementById("dataTitle").innerText =
+        isAr ? "المعلومات الشخصية" : "Personal Information";
+
+    document.getElementById("dataText").innerText =
+        isAr
+        ? "لا تطلب الحاسبة من المستخدم إدخال الاسم أو عنوان البريد الإلكتروني أو رقم الهاتف لاستخدام وظائفها الأساسية."
+        : "The calculator does not require users to enter their name, email address, or phone number to use its basic functions.";
+
+    document.getElementById("contactTitle").innerText =
+        isAr ? "التواصل" : "Contact";
+
+    document.getElementById("contactText").innerText =
+        isAr
+        ? "إذا كانت لديك أي أسئلة حول سياسة الخصوصية، يمكنك التواصل معنا."
+        : "If you have any questions regarding this Privacy Policy, you may contact us.";
+
+    document.getElementById("backLink").innerText =
+        isAr ? "العودة إلى الحاسبة" : "Back to Calculator";
+}
+
+</script>
+
 </body>
 </html>
