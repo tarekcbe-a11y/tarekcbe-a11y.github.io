@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل أذون الخزانة - جروب عملاء البنوك المصرية</title>
+
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background: #0f172a;
+            color: #f9fafb;
+            padding: 15px;
+            line-height: 1.8;
+            margin: 0;
+            user-select: none;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 30px auto;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid #ffd700;
+            box-sizing: border-box;
+        }
+
+        .lang-btn {
+            background: #ffd700;
+            color: #000;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 12px;
+            display: block;
+            margin: 0 0 15px auto;
+        }
+
+        h1 {
+            color: #ffd700;
+            text-align: center;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        h3 {
+            color: #ffd700;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        p, li {
+            color: #e5e7eb;
+            font-size: 12px;
+        }
+
+        ul {
+            padding-right: 18px;
+            margin: 5px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #ffd700;
+            border-top: 1px solid #ffd700;
+            padding-top: 10px;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">English</button>
+
+    <h1 id="title">دليل أذون الخزانة وطريقة الاستخدام</h1>
+
+    <p id="intro">
+        تعتبر أذون الخزانة إحدى أدوات الدين الحكومي قصيرة الأجل التي تصدرها وزارة المالية لتمويل عجز الموازنة العامة، وتتميز بكونها استثماراً آمناً يدر عائداً يحدد بناءً على أسعار الفائدة السائدة.
+    </p>
+
+    <h3 id="whatTitle">ما هي أذون الخزانة؟</h3>
+    <p id="whatText">
+        هي أوراق مالية بقيمة اسمية محددة تُباع بأقل من قيمتها الاسمية (بخصم)، ويسترد المستثمر القيمة الاسمية كاملة في نهاية مدة الإذن (91، 182، 273، أو 364 يوماً)، ويُمثل الفرق بين سعر الشراء والقيمة الاسمية (مخصوماً منه الضريبة) صافي أرباح المستثمر.
+    </p>
+
+    <h3 id="howTitle">كيف تستخدم الحاسبة؟</h3>
+    <ul id="howList">
+        <li><b>اختر السوق:</b> تحديد ما إذا كان الاستثمار في السوق الأولي (العطاءات الأساسية) أو السوق الثانوي (التداول بين المستثمرين).</li>
+        <li><b>القيمة الاسمية:</b> إدخال القيمة الإجمالية للأذون المراد استثمارها.</li>
+        <li><b>سعر العائد:</b> إدخال نسبة الفائدة السنوية المقررة.</li>
+        <li><b>المدة:</b> اختيار عدد أيام الإذن بدقة.</li>
+        <li><b>النتائج الفورية:</b> تعرض الحاسبة تلقائياً سعر الشراء، العائد، ضريبة الأرباح التجارية والصناعية بنسبة 20%، صافي الربح، والمبلغ الإجمالي المسترد عند الاستحقاق.</li>
+    </ul>
+
+    <h3 id="taxTitle">الضرائب على العوائد</h3>
+    <p id="taxText">
+        تخضع أذون الخزانة في مصر لضريبة مقطوعة بنسبة 20% تُخصم من عوائد الإذن وفقاً للقوانين المصرية المنظمة للضرائب على أذون وسندات الخزانة.
+    </p>
+
+    <div class="footer">
+        🛡️ جروب عملاء البنوك المصرية<br>
+        <a href="privacy.html" style="color:#ffd700; text-decoration:none;">سياسة الخصوصية</a> | 
+        <a href="about.html" style="color:#ffd700; text-decoration:none; font-size: 11px;">دليل أذون الخزانة</a> | 
+        <a href="index.html" style="color:#ffd700; text-decoration:none;">الرئيسية</a><br>
+        Developed by Tarek Metwally
+    </div>
+
+</div>
+
+<script>
+let isAr = true;
+
+function toggleLang() {
+    isAr = !isAr;
+
+    document.documentElement.lang = isAr ? "ar" : "en";
+    document.documentElement.dir = isAr ? "rtl" : "ltr";
+
+    document.getElementById("langBtn").innerText = isAr ? "English" : "العربية";
+
+    document.getElementById("title").innerText = isAr ? "دليل أذون الخزانة وطريقة الاستخدام" : "Treasury Bills Guide & How to Use";
+
+    document.getElementById("intro").innerText = isAr 
+        ? "تعتبر أذون الخزانة إحدى أدوات الدين الحكومي قصيرة الأجل التي تصدرها وزارة المالية لتمويل عجز الموازنة العامة، وتتميز بكونها استثماراً آمناً يدر عائداً يحدد بناءً على أسعار الفائدة السائدة."
+        : "Treasury bills are short-term government debt instruments issued by the Ministry of Finance to finance the state budget deficit, characterized as a safe investment yielding returns based on prevailing interest rates.";
+
+    document.getElementById("whatTitle").innerText = isAr ? "ما هي أذون الخزانة؟" : "What are Treasury Bills?";
+    document.getElementById("whatText").innerText = isAr 
+        ? "هي أوراق مالية بقيمة اسمية محددة تُباع بأقل من قيمتها الاسمية (بخصم)، ويسترد المستثمر القيمة الاسمية كاملة في نهاية مدة الإذن (91، 182، 273، أو 364 يوماً)، ويُمثل الفرق بين سعر الشراء والقيمة الاسمية (مخصوماً منه الضريبة) صافي أرباح المستثمر."
+        : "They are securities with a specific nominal value sold at a discount, where the investor recovers the full nominal value at maturity (91, 182, 273, or 364 days). The difference between the purchase price and the nominal value (minus tax) represents the net profit.";
+
+    document.getElementById("howTitle").innerText = isAr ? "كيف تستخدم الحاسبة؟" : "How to Use the Calculator?";
+    document.getElementById("howList").innerHTML = isAr 
+        ? `<li><b>اختر السوق:</b> تحديد ما إذا كان الاستثمار في السوق الأولي (العطاءات الأساسية) أو السوق الثانوي (التداول بين المستثمرين).</li>
+           <li><b>القيمة الاسمية:</b> إدخال القيمة الإجمالية للأذون المراد استثمارها.</li>
+           <li><b>سعر العائد:</b> إدخال نسبة الفائدة السنوية المقررة.</li>
+           <li><b>المدة:</b> اختيار عدد أيام الإذن بدقة.</li>
+           <li><b>النتائج الفورية:</b> تعرض الحاسبة تلقائياً سعر الشراء، العائد، ضريبة الأرباح التجارية والصناعية بنسبة 20%، صافي الربح، والمبلغ الإجمالي المسترد عند الاستحقاق.</li>`
+        : `<li><b>Select Market:</b> Choose whether the investment is in the primary market or secondary market.</li>
+           <li><b>Nominal Value:</b> Enter the total value of the bills.</li>
+           <li><b>Interest Rate:</b> Enter the designated annual yield rate.</li>
+           <li><b>Duration:</b> Select the exact number of days.</li>
+           <li><b>Instant Results:</b> The calculator automatically displays purchase price, returns, 20% tax, net profit, and maturity amount.</li>`;
+
+    document.getElementById("taxTitle").innerText = isAr ? "الضرائب على العوائد" : "Taxation on Returns";
+    document.getElementById("taxText").innerText = isAr 
+        ? "تخضع أذون الخزانة في مصر لضريبة مقطوعة بنسبة 20% تُخصم من عوائد الإذن وفقاً للقوانين المصرية المنظمة للضرائب على أذون وسندات الخزانة."
+        : "Treasury bills in Egypt are subject to a flat 20% tax deducted from the returns in accordance with Egyptian tax laws governing treasury bills and bonds.";
+}
+</script>
+
+</body>
+</html>
